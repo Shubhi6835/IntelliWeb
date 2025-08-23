@@ -7,9 +7,11 @@ const app=express()
 
 const port=process.env.PORT || 5000
 
-
 app.listen(port,()=>{
     connectDb()
     console.log("server started")
 })
-e
+
+app.get("/", (req,res)=>{
+    res.send("Hello World");
+})
